@@ -11,3 +11,19 @@ export const gifTrendingService = {
         .then((res)=> res.data.data )
     }
 }
+
+
+export const gifSearchService = {
+    async getSearch(searchQuery: string, limitQuery:number): Promise<IGiphy[]> {
+        
+        // https://api.giphy.com/v1/gifs/search?api_key=${process.env.API_KEY}&q=${query}&limit=25&offset=0&rating=g&lang=en
+        return axios.get('https://api.giphy.com/v1/gifs/search',
+        {params: {
+          api_key: 'Kal7Q1hcCswEKweR9Qm3V97mMwrcm2Mz',
+          q:searchQuery,
+          limit: limitQuery
+        }, 
+        })
+        .then((res)=> res.data.data )
+    }
+}
