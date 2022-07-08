@@ -1,10 +1,19 @@
-
+import React from "react"
+import { Card } from "../components/Card/Card";
+import { gifTrendingService } from "../services/gifAPI";
+import { IGiphy } from "../services/gifTYPE"
 
 
 
 export default function Home() {
 
+    const [gifs, setGifs]= React.useState<IGiphy[]>([]);
 
+    React.useEffect(() => {
+        gifTrendingService.getTrending().then((data) => setGifs(data));
+    },[])
+
+    console.log(gifs)
     return (
         <div className="home-container">
 
@@ -14,6 +23,13 @@ export default function Home() {
             </div>
             <div className="home-trending-card">
                 {/* Cards */}
+                
+                {gifs.map((featured, indx) => {
+                    return (
+                        <Card key={indx} id={featured.id} images={featured.images} />
+                    )
+                })}
+
             </div>
         </div>
     )
