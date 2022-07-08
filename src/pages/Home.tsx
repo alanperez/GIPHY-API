@@ -14,7 +14,7 @@ export default function Home() {
         gifTrendingService.getTrending().then((data) => setGifs(data));
     },[])
 
-    console.log(gifs)
+    // console.log(gifs)
     return (
         <div className="home-container">
 
