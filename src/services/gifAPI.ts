@@ -1,8 +1,9 @@
 import axios from "axios";
 import { IGiphy } from "./gifTYPE";
+
+let apikey = process.env.REACT_APP_API_KEY
 export const gifTrendingService = {
     async getTrending(): Promise<IGiphy[]> {
-        let apikey = process.env.REACT_APP_API_KEY
         // const res = await giphyAPI.get(`/trending?api_key=${apikey}&limit=6&rating=g`);
         // console.log('clg res trend ', res )
         // return res;
@@ -19,7 +20,7 @@ export const gifSearchService = {
         // https://api.giphy.com/v1/gifs/search?api_key=${process.env.API_KEY}&q=${query}&limit=25&offset=0&rating=g&lang=en
         return axios.get('https://api.giphy.com/v1/gifs/search',
         {params: {
-          api_key: 'Kal7Q1hcCswEKweR9Qm3V97mMwrcm2Mz',
+          api_key: apikey,
           q:searchQuery,
           limit: limitQuery
         }, 
