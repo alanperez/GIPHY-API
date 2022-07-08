@@ -19,8 +19,8 @@ export const SearchBar = () => {
         }
     }
 
-    console.log('clg gif searhc', search)
-    console.log('clg search term ', searchTerm)
+    // console.log('clg gif searhc', search)
+    // console.log('clg search term ', searchTerm)
     return (
         <div className="searchbar-container">
             <div className="card-container__title">
