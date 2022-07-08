@@ -1,0 +1,20 @@
+.home-container {
+
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.home-text {
+    text-align: center;
+}
+.home-trending-card {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    /* background-color: #2196F3; */
+    padding: 10px;
+    justify-content: center;
+}
+
