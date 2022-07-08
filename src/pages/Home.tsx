@@ -1,8 +1,9 @@
 import React from "react"
+import "./home.css"
+import { SearchBar } from "../components/SearchBar/Search";
 import { Card } from "../components/Card/Card";
 import { gifTrendingService } from "../services/gifAPI";
 import { IGiphy } from "../services/gifTYPE"
-
 
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
                 })}
 
             </div>
+            < SearchBar />
         </div>
     )
 
